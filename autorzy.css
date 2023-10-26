@@ -7,7 +7,8 @@ body {
     height: 90vh;
     background: #222;
 }
-.gradient-border {
+
+.gradient-border1, .gradient-border2, .gradient-border3 {
     --border-width: 6px;
 
     position: relative;
@@ -36,48 +37,20 @@ body {
         height: calc(100% + var(--border-width) * 4);
         background: linear-gradient(
                 60deg,
-                hsl(224, 85%, 66%),
-                hsl(269, 85%, 66%),
-                hsl(314, 85%, 66%),
-                hsl(359, 85%, 66%),
-                hsl(44, 85%, 66%),
-                hsl(89, 85%, 66%),
-                hsl(134, 85%, 66%),
-                hsl(179, 85%, 66%)
+                hsl(45, 85%, 66%),
+                hsl(90, 85%, 66%),
+                hsl(135, 85%, 66%),
+                hsl(180, 85%, 66%),
+                hsl(225, 85%, 66%),
+                hsl(270, 85%, 66%),
+                hsl(315, 85%, 66%),
+                hsl(0, 85%, 66%)
         );
         background-size: 300% 300%;
         background-position: 0 50%;
         border-radius: calc(4 * var(--border-width));
         animation: moveGradient 4s alternate infinite;
     }
-}
-
-.gradient-border:nth-child(2)::after {
-    background: linear-gradient(
-            60deg,
-            hsl(120, 85%, 66%),
-            hsl(165, 85%, 66%),
-            hsl(210, 85%, 66%),
-            hsl(255, 85%, 66%),
-            hsl(300, 85%, 66%),
-            hsl(345, 85%, 66%),
-            hsl(30, 85%, 66%),
-            hsl(75, 85%, 66%)
-    );
-}
-
-.gradient-border:nth-child(3)::after {
-    background: linear-gradient(
-            60deg,
-            hsl(45, 85%, 66%),
-            hsl(90, 85%, 66%),
-            hsl(135, 85%, 66%),
-            hsl(180, 85%, 66%),
-            hsl(225, 85%, 66%),
-            hsl(270, 85%, 66%),
-            hsl(315, 85%, 66%),
-            hsl(0, 85%, 66%)
-    );
 }
 
 .content {
