@@ -1,14 +1,119 @@
-*
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body
-{
+@import url("https://fonts.googleapis.com/css?family=Lato:300");
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: black;
+    height: 90vh;
+    background: #222;
+}
+.gradient-border {
+    --border-width: 6px;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 400px;
+    font-family: Lato, sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: white;
+    background: #222;
+    border-radius: var(--border-width);
+    margin: 10px;
+    border: var(--border-width) solid transparent;
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: calc(-2 * var(--border-width));
+        left: calc(-2 * var(--border-width));
+        z-index: -1;
+        width: calc(100% + var(--border-width) * 4);
+        height: calc(100% + var(--border-width) * 4);
+        background: linear-gradient(
+                60deg,
+                hsl(224, 85%, 66%),
+                hsl(269, 85%, 66%),
+                hsl(314, 85%, 66%),
+                hsl(359, 85%, 66%),
+                hsl(44, 85%, 66%),
+                hsl(89, 85%, 66%),
+                hsl(134, 85%, 66%),
+                hsl(179, 85%, 66%)
+        );
+        background-size: 300% 300%;
+        background-position: 0 50%;
+        border-radius: calc(4 * var(--border-width));
+        animation: moveGradient 4s alternate infinite;
+    }
+}
+
+.gradient-border:nth-child(2)::after {
+    background: linear-gradient(
+            60deg,
+            hsl(120, 85%, 66%),
+            hsl(165, 85%, 66%),
+            hsl(210, 85%, 66%),
+            hsl(255, 85%, 66%),
+            hsl(300, 85%, 66%),
+            hsl(345, 85%, 66%),
+            hsl(30, 85%, 66%),
+            hsl(75, 85%, 66%)
+    );
+}
+
+.gradient-border:nth-child(3)::after {
+    background: linear-gradient(
+            60deg,
+            hsl(45, 85%, 66%),
+            hsl(90, 85%, 66%),
+            hsl(135, 85%, 66%),
+            hsl(180, 85%, 66%),
+            hsl(225, 85%, 66%),
+            hsl(270, 85%, 66%),
+            hsl(315, 85%, 66%),
+            hsl(0, 85%, 66%)
+    );
+}
+
+.content {
+    z-index: 1;
+    width: 550px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: calc(4 * var(--border-width));
+}
+
+.content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.big-text {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.small-text {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+@keyframes moveGradient {
+    50% {
+        background-position: 100% 50%;
+    }
 }
