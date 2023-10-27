@@ -80,3 +80,27 @@ nav a:nth-child(3):hover ~ span {
 nav a:hover {
     color: #000000;
 }
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 20px;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+i.fa-github {
+    font-size: 4em;
+    color: #ffffff;
+    transition: transform 0.3s, color 0.3s;
+}
+
+i.fa-github:hover {
+    transform: translateY(-5px);
+    color: #ff3333;
+}
