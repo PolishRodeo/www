@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000000;
+}
+
+.title {
+    font-size: 4.5em;
+    color: transparent;
+    margin-bottom: 0px;
+    background: linear-gradient(to bottom, #ff3333, #4f1919);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.cytat {
+    font-size: 2em;
+    margin-top: 10px;
+    background: linear-gradient(to bottom, #FFD700, #FFA500);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+nav {
+    position: relative;
+    width: 900px;
+    height: 75px;
+    background: #222;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    position: relative;
+    display: inline-block;
+    font-size: 1.5em;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 90px;
+    z-index: 1;
+    transition: color 0.3s;
+}
+
+nav span {
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 100%;
+    background: linear-gradient(45deg, #4f1919, #ff3333);
+    border-radius: 12px;
+    position: absolute;
+    transition: left 0.3s, width 0.3s;
+}
+
+nav a:nth-child(1):hover ~ span {
+    left: 0;
+    width: 320px;
+}
+
+nav a:nth-child(2):hover ~ span {
+    left: 275px;
+    width: 320px;
+}
+
+nav a:nth-child(3):hover ~ span {
+    left: 575px;
+    width: 323px;
+}
+
+nav a:hover {
+    color: #000000;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 20px;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+i.fa-github {
+    font-size: 4em;
+    color: #ffffff;
+    transition: transform 0.3s, color 0.3s;
+}
+
+i.fa-github:hover {
+    transform: translateY(-5px);
+    color: #ff3333;
+}

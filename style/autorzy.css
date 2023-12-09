@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300");
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background: #222;
+}
+
+.gradient-border1, .gradient-border2, .gradient-border3 {
+    --border-width: 6px;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 400px;
+    font-family: Lato, sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: white;
+    background: #222;
+    border-radius: var(--border-width);
+    margin: 10px;
+    border: var(--border-width) solid transparent;
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: calc(-2 * var(--border-width));
+        left: calc(-2 * var(--border-width));
+        z-index: -1;
+        width: calc(100% + var(--border-width) * 4);
+        height: calc(100% + var(--border-width) * 4);
+        background: linear-gradient(
+                60deg,
+                hsl(45, 85%, 66%),
+                hsl(90, 85%, 66%),
+                hsl(135, 85%, 66%),
+                hsl(180, 85%, 66%),
+                hsl(225, 85%, 66%),
+                hsl(270, 85%, 66%),
+                hsl(315, 85%, 66%),
+                hsl(0, 85%, 66%)
+        );
+        background-size: 300% 300%;
+        background-position: 0 50%;
+        border-radius: calc(4 * var(--border-width));
+        animation: moveGradient 4s alternate infinite;
+    }
+}
+
+.content {
+    z-index: 1;
+    width: 550px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: calc(4 * var(--border-width));
+}
+
+.content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.big-text {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.small-text {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+@keyframes moveGradient {
+    50% {
+        background-position: 100% 50%;
+    }
+}
