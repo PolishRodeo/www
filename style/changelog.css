@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300");
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background: #222;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-item {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #ff3333;
+}
+
+.changelog-container {
+    color: #ff3333;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #ff3333;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    margin-top: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+.version {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.changes {
+    margin-left: 20px;
+}
+
+.changes p {
+    margin: 5px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-item {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #ff3333;
+    border: 2px solid #ff3333;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin-left: -10px; /* Dodane, aby przesunąć numerki bardziej na lewo */
+    transition: background-color 0.3s;
+}
+
+.sidebar-item:hover {
+    background-color: #ff3333;
+    color: #222;
+}
