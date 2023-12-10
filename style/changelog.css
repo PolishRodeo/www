@@ -80,7 +80,7 @@ li {
     border: 2px solid #ff3333;
     border-radius: 20px;
     padding: 5px 15px;
-    margin-left: -10px; /* Dodane, aby przesunąć numerki bardziej na lewo */
+    margin-left: -10px;
     transition: background-color 0.3s;
 }
 
