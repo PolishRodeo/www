@@ -22,7 +22,7 @@ body {
 }
 
 .cytat {
-    font-size: 2em;
+    font-size: 1.8em;
     margin-top: 10px;
     background: linear-gradient(to bottom, #FFD700, #FFA500);
     -webkit-background-clip: text;
